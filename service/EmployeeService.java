@@ -19,6 +19,7 @@ public class EmployeeService implements EService {
 	@Override
 	public EmployeeModel postempuser(EmployeeModelDTO model) {
 		EmployeeModel user = new EmployeeModel (model);
+		repository.save(user);
 		return user;
 	}
 
